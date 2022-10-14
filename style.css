@@ -1,0 +1,242 @@
+*{
+    font-size:62.5%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    --gris: rgb(245, 245, 245);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*--------Navigation----------*/
+#banner{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    padding: 1rem 0px;
+    z-index: 3;
+}
+header{
+    display: flex;
+    align-items: center;
+}
+#menu {
+    background-color: rgba(255,255,255, 0);
+    margin: 0 3rem;
+}
+#hamb{
+    width: 2rem;
+}
+#logo{
+    width: 8rem;
+}
+.lupa{
+    height: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 0.01rem solid rgb(190, 190, 190);
+    background-color: var(--gris);
+}
+.lupa:hover{
+    background-color: rgb(230, 230, 230);
+}
+.buscar{
+    padding-left: 5px;
+    flex-grow: 1;
+    border: 0.01rem solid rgb(192, 192, 192);
+    height: 3rem;
+    font-size: 1.6rem;
+}
+.buscar:focus {
+    border:0;
+}
+.barra{
+    display: flex;
+    align-items: center;
+    width:50%;
+    margin: 0 auto;
+}
+.ico{
+    width: 2rem;
+    margin: 0 1rem;
+}
+.ico-small{
+    width: 1.5rem;
+}
+#mic {
+    background-color: rgb(240, 239, 236);
+    border-radius: 100%;
+    width: 3rem;
+    padding: 0.7rem;
+    margin-left: 1rem;
+}
+.foto{
+    width: 3rem;
+    border-radius: 100%;
+    margin-right: 2rem;
+}
+
+/*------Barra intereses--------*/
+#intereses{
+    display: flex;
+    margin: 1rem 0 0 9rem;
+    border-top: 0.01rem solid rgba(165, 165, 165, 0.5);;
+}
+#intereses p:hover{
+    background-color: rgb(230, 230, 230);;
+}
+#intereses p{
+    background-color: var(--gris);
+    border: 0.01rem solid rgba(165, 165, 165, 0.5);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 0 0;
+    white-space: nowrap; /*para no dar salto de linea*/
+    font-size: 1.2rem;
+    ;
+}
+#intereses p:nth-of-type(1){
+    background-color: black;
+    color: white;
+}
+#flecha{
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    right: 0;
+}
+
+/*-------Sidebar---------*/
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 5.5rem;    
+    margin-top: 2rem;
+}
+.side{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.2rem 0 1.2rem 0;
+}
+.side:hover{
+    background-color: rgb(230, 230, 230);
+}
+.side p{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/*------Main (videos)-----------*/
+#videos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--gris);
+    margin: 8.5rem 0 0 5.5rem;
+    padding: 1rem 0 0 2rem;
+}
+
+/*button{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 0.5rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: rgb(119, 119, 119);
+    background-color: var(--gris);
+}
+button img{
+    display: inline;
+}*/
+
+.cuadro{
+   margin: 2rem 0 1rem 0;
+}
+.cuadro:hover{
+    display: block;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(196, 191, 191, 0.8);
+    transition-delay: 0.7s;
+    transition-duration: 0.5s;
+    transform: scale(1.2);
+}
+/*.cuadro:hover button {
+    display: block;
+}*/
+.vid{
+    width: 20rem;
+}
+.perfil{
+    position: absolute;
+    width: 2.5rem;
+    border-radius: 100%;
+    margin: 0 1rem 0 1rem;
+}
+.descrip{
+    margin-top: 1rem;
+}
+.descrip p{
+    width: 14rem;
+    margin-left: 4rem;
+}
+.titulo{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.datos{
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: rgb(119, 119, 119);;
+}
+
+@media screen and (max-width: 720px) {
+    .sidebar{
+        display: none;
+    }
+    .buscar{
+        display: none;
+    }
+    .barra{
+        margin: 0 auto;
+    }
+    .ico{
+        margin: 0 1rem ;
+    }
+    #videos{
+        margin: 11rem 0 0 0;
+    }
+    .lupa{
+        padding: 0.5rem;
+    }
+    #intereses{
+        margin: 1rem 0 0 1rem;
+    }
+}
+@media screen and (max-width: 420px) {
+    .sidebar{
+        display: none;
+    }
+    .ico{
+        margin: 0 0.5rem ;
+    }
+    .menu{
+        padding: 0 0.5rem;
+    }
+    .vid{
+        width: 90%;
+    }
+    .descrip p{
+        width: 70%;
+        font-size: 1.2rem;
+    }
+}
